@@ -15,8 +15,13 @@ To load (or update) this repository on the Noteable server:
 
 1. Login to Noteable, using the link on the [course Learn page](https://www.learn.ed.ac.uk/ultra/courses/_135373_1/outline).
 2. Open a Standard Notebook (Python 3)
-3. **FIRST TIME ONLY** Go to the Git menu, click clone Git Repository and select URL: https://github.com/edinburgh-bto/2026-DExB2. This should create or update a folder called 2025-DExB2, that you can work in.
+3. **FIRST TIME ONLY** Go to the Git menu, click clone Git Repository and select URL: https://github.com/edinburgh-bto/2026-DExB2. **Be sure to tick the box saying "Download repository".** This should create or update a folder called 2026-DExB2, that you can work in.
 4. **OTHER TIMES** - first navigate to the 2026-DExB2 on your Noteable server. Go to the Git menu, click `Pull from Remote`, and it should update your local files.
+
+If you already downloaded and updating by "Pull from Remote" isn't working from the 2026-DExB2 directory on your Noteable server, then:
+
+1. Rename your directory on Noteable e.g. from 2026-DExB2 to 2026-DExB2_version2026-10-01. This means that your work in that folder won't be deleted or overwritten.
+2. Navigate back to the root directory on Noteable. Then Clone a Repository again, being sure to tick the box "Download the repository"​.
 
 Note: Please open Noteable only from the Biology 2A Learn course link. (Do not use direct URLs or bookmarks.) If your session times out or you see "server shut down," go back to Learn and click the course link again.
 
