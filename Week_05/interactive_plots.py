@@ -158,7 +158,7 @@ class pop_est:
 
         mu_sl = FloatSlider(min=25, max=75, value=self.mu, step=1, layout={'width':'50%'}, style={'description_width':'initial', 'handle_color':'LightBlue'}, description='Population mean dive duration')
         sigma_sl = FloatSlider(min=1, max=20, value=self.sigma, step=1, layout={'width':'50%'}, style={'description_width':'initial', 'handle_color':'LightBlue'}, description='Population st. dev. of dive duration')
-        n_sl = IntSlider(min=5, max=self.n, value=self.n, step=1, layout={'width':'50%'}, style={'description_width':'initial', 'handle_color':'LightBlue'}, description='Sample size')
+        n_sl = IntSlider(min=2, max=self.n, value=self.n, step=1, layout={'width':'50%'}, style={'description_width':'initial', 'handle_color':'LightBlue'}, description='Sample size')
 
         for s in [mu_sl, sigma_sl, n_sl]:
             s.observe(update_slider, 'value')
