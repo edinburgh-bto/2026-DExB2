@@ -109,20 +109,23 @@ class pop_est:
             xbar = sample.mean()
             std = sample.std()
             sem = std/np.sqrt(self.n)
-            # tn = t.ppf(0.975, df=self.n-1)
+            tn = t.ppf(0.975, df=self.n-1)
 
             ax.hist(sample, bins=bins, alpha=0.5, color='C0', ec='k')
 
-            # ax.errorbar(xbar, 25, xerr=s['sem'], capsize=3, color='C0')
+            ax.errorbar(xbar, 23, xerr=tn*sem, capsize=3, color='purple')
             ax.text(self.mu, 25,
                     r'$\hat{\mu}$ = '
-                    f'{xbar:.2f} ± {sem:.2f} mins',
+                    f'{xbar:.2f} ± {tn*sem:.2f} mins',
                     # f'\n95% CI: [{xbar - tn*sem:.2f}, {xbar + tn*sem:.2f}]',
                     ha='center', ma='center', color='C0', fontsize=12)
 
             ax.text(0, 15,
+                    r'$n$ = ' f'{self.n}\n'
                     r'$\bar{x}$ = ' f'{xbar:.2f}\n'
-                    r'$s$ = ' f'{std:.2f}',
+                    r'$s$ = ' f'{std:.2f}\n'
+                    f'SEM = {sem:.2f}\n'
+                    r'$t_{n-1}$ = ' f'{tn:.2f}',
                     ha='left', ma='left', color='C1', fontsize=10)
 
             ax.set_xlabel('Dive duration (mins)')
